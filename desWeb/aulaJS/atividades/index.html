@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="Clique aqui" onclick="alert('olá você me clicou!')">
+    <input type="button" value="chama funcao" onclick="mensagem()">
+    <script>
+        let escolha = Number(prompt('Escolha a operação o pelo número: 1- Soma; 2- Diminuição; 3- Multiplicação; 4- Divisão'));
+        if (escolha == 1) {
+            let num1 = Number(prompt('Digite o primeiro número: '));
+            let num2 = Number(prompt('Digite o segundo número: '));
+            
+            soma = num1 + num2;
+            console.log('Soma: ', soma);
+            alert('Soma: '+soma);
+
+        } if(escolha = 2){
+            let num1 = Number(prompt('Digite o primeiro número: '));
+            let num2 = Number(prompt('Digite o segundo número: '));
+            
+            dimini = num1 - num2;
+            console.log('Subtração: ', dimini);
+            alert('Subtração: '+dimini);
+
+        } if (escolha = 3){
+            let num1 = Number(prompt('Digite o primeiro número: '));
+            let num2 = Number(prompt('Digite o segundo número: '));
+            
+            vezes = num1 * num2;
+            console.log('Multiplicação: ', vezes);
+            alert('Multiplicação: '+vezes)
+        } if (escolha = 4){
+            let num1 = Number(prompt('Digite o primeiro número: '));
+            let num2 = Number(prompt('Digite o segundo número: '));
+            
+            divisi = num1 / num2;
+            console.log('Divisão: ', divisi);
+            alert('Divisão: '+divisi)
+        }
+
+        alert('eusouumafunçaó');
+    </script>
+</body>
+
+</html>

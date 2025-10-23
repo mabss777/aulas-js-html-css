@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante JS</title>
+</head>
+<body>
+    <h1>Restaurante JS</h1>
+
+    <label for="valorKg">Buffet por Quilo R$:</label>
+    <input type="text" id="valorKg">
+    <br><br>
+
+    <label for="consumoClie">Consumo do Cliente (gr):</label>
+    <input type="text" id="consumoClie">
+    <br><br>
+
+    <input type="button" id="botao" value="Calcular Preço">
+
+    <br><br>
+    <span id="msgValorPg"></span>
+
+    <script>
+         let botao = document.querySelector('#botao');
+        botao.addEventListener('click', function(){
+            let valorKg = Number(document.querySelector('#valorKg').value);
+            let consumoClie = Number(document.querySelector('#consumoClie').value);
+
+            //calculo
+ 
+            let valorClie = consumoClie / 1000;
+            let valorPgd = (valorClie * valorKg).toFixed(2);
+
+            //dados
+
+            let msgValorPg = document.querySelector('#msgValorPg');
+            
+            msgValorPg.innerText = `Valor a pagar R$: ${valorPgd}`;
+        });
+        
+    </script>
+</body>
+</html>

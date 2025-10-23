@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Revenda de Veículos JS</h1>
+
+    <label for="veiculo">Veículo:</label>
+    <input type="text" id="veiculo">
+    <br><br>
+
+    <label for="preco">Preço:</label>
+    <input type="text" id="preco">
+    <br><br>
+
+    <input type="button" id="botao" value="Ver promoção">
+
+    <br><br>
+    <span id="msgPromo"></span>
+
+    <br><br>
+    <span id="msgEntrada"></span>
+
+    <br><br>
+    <span id="msgParcelas"></span>
+
+    <script>
+        let botao = document.querySelector('#botao');
+        botao.addEventListener('click', function(){
+            let veiculo = document.querySelector('#veiculo').value;
+            let preco = Number(document.querySelector('#preco').value);
+
+            //calculo
+            let entrada = Math.floor(preco / 2); 
+            let parcelas = Math.floor(entrada / 12);
+
+
+            //os dados
+
+            let msgEntrada = document.querySelector('#msgEntrada');
+            let msgParcelas = document.querySelector('#msgParcelas');
+            let msgPromo = document.querySelector('#msgPromo');
+
+            msgPromo.innerText = `Promoção: ${veiculo}`;
+            msgEntrada.innerText = `Entrada de R$: ${entrada}`;
+            msgParcelas.innerText = `+12x de R$: ${parcelas}`;
+
+
+
+
+        });
+
+    </script>
+</body>
+</html>

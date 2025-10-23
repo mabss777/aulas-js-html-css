@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FARMACIA</title>
+</head>
+
+<body>
+    <h1>Farmácia JS</h1>
+
+    <br>
+    <label for="medicamento">Medicamento:</label>
+    <input type="text" id="medicamento">
+
+    <br><br>
+    <label for="preco">Preço R$:</label>
+    <input type="text" id="preco">
+
+
+    <br><br>
+    <input type="button" id="botao" value="Mostrar Promoção">
+
+    <br><br>
+    <span id="msgMed"></span>
+
+    <br><br>
+    <span id="msgPromo"></span>
+
+    <script>
+        let botao = document.querySelector('#botao');
+        botao.addEventListener('click', function () {
+            let medicamento = document.querySelector('#medicamento').value;
+            let preco = Number(document.querySelector('#preco').value.replace(',', '.'));
+
+            //calculo
+
+            let valto = preco * 2;
+            let valin = Math.floor(valto);
+            let valfi = valin.toFixed(2);
+            
+            //dados
+            
+            let msgMed = document.querySelector('#msgMed');
+            msgMed.innerText = `Promoção de ${medicamento}`;
+
+            let msgPromo = document.querySelector('#msgPromo');
+            msgPromo.innerText = `Leve 2 por apenas R$ ${valfi}`;            
+        });
+
+    </script>
+</body>
+
+</html>

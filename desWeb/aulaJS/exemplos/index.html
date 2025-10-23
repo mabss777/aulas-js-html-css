@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+
+    <link rel="stylesheet" href="style2.css">
+
+</head>
+<body>
+    <h1>Aula java script</h1>
+    <h1 id="titulo"> Titulo principal</h1>
+    <p class="parafagro">Este é um parafagro</p>
+    <p></p>
+
+
+
+
+
+
+
+
+
+<!-- Script Interno -->
+<script>
+
+    let titulo = document.getElementById('titulo');
+    titulo.innerText = 'ABADABADOOO'
+    console.log(titulo);
+
+    let parafagro = document.getElementsByClassName('parafagro')[0];
+    parafagro.innerText = 'Este é o novo parararararrafrago';
+
+
+
+    /*
+    //array
+
+    notas = new Array(5);
+    notas[0] = 7;
+    notas[1] = 9;
+    notas[2] = 10;
+    notas[3] = 5;
+    notas[4] = 2;
+
+    console.log(notas);
+    console.log(notas[0]);
+    console.log(notas[1]);
+    console.log(notas[2]);
+    console.log(notas[3]);
+    console.log(notas[4]);
+
+    if (notas[0] === 7){
+        debugger;
+    }
+
+
+    
+    //FOR
+
+    for(i=0; i<5; i++){
+        console.log('loop: ', i);
+    }
+
+    //while
+    i=0;
+    while(1>5){
+        console.log('loop 2: ', i);
+        i++;
+    }
+    //variaveis
+    let nome = "Abamile"; //string
+    let idade = (18); //number
+    let peso = (85); //number
+    let opcao = true; // boolean
+    let array = [10, 20, 30, 2000, 'a', "Amabile", false];
+    let objeto = document.querySelector('h1');
+    console.log(objeto);
+    objeto.innerText = 'Alterei o texto hihihihihi'
+    console.log(nome);
+    console.log(idade);
+    console.log(peso, opcao, array)
+
+
+    function soma(n1, n2){
+        let num1 = n1;
+        let num2 = n2;
+
+        let soma = num1 + num2;
+        return soma;
+    }
+
+    console.log('Soma: ', soma(10,20));
+    
+    num1 = 40;
+    num2 = 50;
+
+    soma = num1 + num2;
+    console.log('Soma: ', soma);
+
+    let retornoAlert = alert('Teste da calculadora');
+    console.log('Alerta: ', retornoAlert);
+   let retornoPrompt = Number(prompt('Digite um numero'));
+   console.log('Prompt: ', retornoPrompt);
+    let retornoConfirm = confirm('Ela disse isso mesmo?');
+    console.log('Confirm: ', retornoConfirm);
+*/
+
+</script>
+<!-- Script externo, sempre na ultima linha-->
+<script src="script.js"></script>
+</body>
+</html>

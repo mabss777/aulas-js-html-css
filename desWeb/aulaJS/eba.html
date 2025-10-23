@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio DOM</title>
+</head>
+<body>
+    <h1 id="titulo">Olá mundo</h1>
+    <p class="texto">Este é o primeiro paragrafo</p>
+    <p class="texto">Este é o segundo paragráfo</p>
+    <div id="novaDiv"></div>
+    <input type="text" id="nome">
+    <a id="link" href="https://google.com.br">GOOGLE</a>
+
+
+
+    <script>
+        let titulo = document.getElementById('titulo');
+        titulo.innerText = 'Bem-vindo ao meu site';
+
+        let textos = document.getElementsByClassName('texto');
+        textos[0].style.color = 'blue';
+        textos[1].style.color = 'pink';
+        textos[1].style.backgroundColor = 'black';
+        
+        let primeiroParagrafo = document.querySelector('.texto');
+        primeiroParagrafo.innerText = 'Este é um velho texto';
+
+        let todosParfagros = document.querySelectorAll('p');
+        console.log(`Quantidade de paragafos: ${todosParfagros.length}`);
+        
+        let novoPargarfo = document.createElement('p');
+        novoPargarfo.innerHTML = "<i>Novo pargafo <mark>criado</mark> dinamicamente</i>";
+
+        let novaDiv= document.getElementById('novaDiv');
+        novaDiv.appendChild(novoPargarfo);
+
+        let nome = document.getElementById('nome');
+        nome.value = 'bebabsbuebidw';
+
+        let link = document.getElementById('link');
+        link.setAttribute('href', 'https://youtube.com')
+
+        
+
+    </script>
+</body>
+</html>
