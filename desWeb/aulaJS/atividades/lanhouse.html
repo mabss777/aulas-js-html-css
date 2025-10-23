@@ -25,15 +25,18 @@
     <script>
         let botao = document.querySelector('#botao');
         botao.addEventListener('click', function(){
-            let valuso = Number(document.querySelector('#valuso').value);
+            let valuso = Number(document.querySelector('#valuso').value.replace(',', '.'));
             let tempuso = Number(document.querySelector('#tempuso').value.replace(',', '.'));
 
             //calculo
 
-            let 
+            let valor = Math.ceil(tempuso / 15);
+            let numsei = valor * valuso;
 
+            //dados 
 
-
+            let msgValorPg = document.querySelector('#msgValorPg');
+            msgValorPg.innerText = `Valor a pagar R$ ${numsei.toFixed(2)}`;
 
         });
 

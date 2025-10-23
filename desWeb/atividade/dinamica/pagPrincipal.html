@@ -18,9 +18,17 @@
 
     <main>
         <div class="centralizar">
-        <div class="images" >
-            <img class="images" src="../img/imagem1.jpg" alt="">
-        </div>
+            <div class="carousel">
+                <div class="carousel-track">
+                    <img src="../img/imagem1.jpg" alt="Imagem 1">
+                    <img src="../img/imagem2.jpg" alt="Imagem 2">
+                    <img src="../img/vitral.png" alt="Imagem 3">
+                    <img src="../img/imagem3.jpg" alt="Imagem 4">
+                </div>
+
+                <button class="carousel-btn prev">⟨</button>
+                <button class="carousel-btn next">⟩</button>
+            </div>
         </div>
     </main>
 
@@ -31,6 +39,39 @@
             <h2 class="emoticos">✧･ﾟ: *✧･ﾟ:* ☆ *:･ﾟ✧*:･ﾟ✧</h2>
         </div>
     </footer>
+
+
+
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const slides = Array.from(track.children);
+        let currentIndex = 0;
+
+        const nextBtn = document.querySelector('.next');
+        const prevBtn = document.querySelector('.prev');
+
+        function showSlide(index) {
+            track.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            showSlide(currentIndex);
+        });
+
+        // Troca automática a cada 4 segundos
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }, 2500);
+    </script>
+
+
 </body>
 
 </html>

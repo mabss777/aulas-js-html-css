@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUPERMERCADO</title>
+</head>
+<body>
+    <h1>SUPERMERCADO JS</h1>
+
+    <br>
+    <label for="produto">Produto:</label>
+    <input type="text" id="produto">
+    <br><br>
+
+    <label for="preco">Preço R$:</label>
+    <input type="text" id="preco">
+    <br><br>
+
+    <input type="button" id="botao" value="Ver Promoção">
+
+    <br><br>
+    <span id="msgPromo"></span>
+
+    <br><br>
+    <span id="msgProd"></span>
+
+    <script>
+        let botao = document.querySelector('#botao');
+        botao.addEventListener('click', function(){
+            let produto = document.querySelector('#produto').value;
+            let preco = Number(document.querySelector('#preco').value);
+
+            //calculo
+            let valto = preco / 2;
+            let valfi = valto + (preco*2);
+
+            //dados
+
+            let msgPromo = document.querySelector('#msgPromo');
+            msgPromo.innerText = `${produto} - Promoção: Leve 3 por R$ ${valfi}`;
+
+            let msgProd = document.querySelector('#msgProd');
+            msgProd.innerText = `O 3° produto custa apenas R$ ${valto}`;
+
+        });
+    </script>
+</body>
+</html>
