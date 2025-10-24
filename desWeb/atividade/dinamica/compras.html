@@ -1,30 +1,249 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compras!</title>
+    <title>Compras - Janela da Alma</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
 
 <body>
-    <header>
-        <div>
-            <p>ioioioi</p>
 
+    <style>
+        /* --- RESET E FONTE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Chango', cursive;
+}
+
+body {
+    background-color: #021373;
+    color: #f5f6ff;
+    padding: 0 10px;
+}
+
+/* --- CABEÇALHO --- */
+header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(161, 178, 224, 0.5);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 2px solid #a1b2e0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+.carrinho-info span {
+    margin-left: 15px;
+}
+
+/* --- PRODUTOS --- */
+.produtos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.produto {
+    background-color: #0433BF;
+    border-radius: 15px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+}
+
+.produto img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.produto h2 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.produto p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.produto button {
+    background-color: #021373;
+    color: #f5f6ff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.produto button:hover {
+    background-color: #a1b2e0;
+}
+
+/* --- CARRINHO --- */
+.carrinho {
+    background-color: rgba(4, 51, 191, 0.25);
+    border: 2px solid #a1b2e0;
+    border-radius: 15px;
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 600px;
+}
+
+.carrinho ul {
+    list-style: none;
+}
+
+.carrinho li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.remove-item {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 3px 7px;
+    cursor: pointer;
+}
+
+/* --- COMENTÁRIOS --- */
+.comentarios-clientes {
+    background: rgba(4, 51, 191, 0.2);
+    border: 2px solid #a1b2e0;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 700px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.titulo-comentarios {
+    color: #a1b2e0;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.texto-comentario {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.nome-cliente {
+    color: #f5f6ff;
+    font-weight: 600;
+}
+
+/* --- RODAPÉ --- */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 0;
+    background-color: #0476D9;
+}
+
+.emoticos {
+    color: #a1b2e0;
+}
+
+.textoRod {
+    color: antiquewhite;
+    margin: 10px 0;
+}
+
+/* --- RESPONSIVO --- */
+@media(max-width:768px) {
+    .produtos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carrinho,
+    .comentarios-clientes {
+        width: 90%;
+    }
+}
+
+    </style>
+    <header>
+        <h1>JANELA DA ALMA</h1>
+        <div class="carrinho-info">
+            <span>Carrinho: <span id="carrinho-count">0</span> itens</span>
+            <span>Total: R$ <span id="carrinho-total">0.00</span></span>
         </div>
     </header>
 
     <main>
-        <div class="pripaiu">
-            <div>
-
+        <!-- PRODUTOS -->
+        <section class="produtos">
+            <div class="produto" data-preco="49.90">
+                <img src="https://picsum.photos/200/200?random=1" alt="Produto A da Janela da Alma">
+                <h2>Produto A</h2>
+                <p>R$ 49,90</p>
+                <button class="add-carrinho">Adicionar</button>
             </div>
-        </div>
+            <div class="produto" data-preco="29.50">
+                <img src="https://picsum.photos/200/200?random=2" alt="Produto B da Janela da Alma">
+                <h2>Produto B</h2>
+                <p>R$ 29,50</p>
+                <button class="add-carrinho">Adicionar</button>
+            </div>
+            <div class="produto" data-preco="99.90">
+                <img src="https://picsum.photos/200/200?random=3" alt="Produto C da Janela da Alma">
+                <h2>Produto C</h2>
+                <p>R$ 99,90</p>
+                <button class="add-carrinho">Adicionar</button>
+            </div>
+        </section>
+
+        <!-- CARRINHO -->
+        <section class="carrinho">
+            <h2>Itens no Carrinho</h2>
+            <ul id="carrinho-itens"></ul>
+        </section>
+
+        <!-- COMENTÁRIOS -->
+        <section class="comentarios-clientes">
+            <h2 class="titulo-comentarios">O que nossos clientes dizem</h2>
+            <div class="comentario">
+                <p class="texto-comentario">“Adorei a experiência de compra, tudo muito poético e delicado!”</p>
+                <span class="nome-cliente">- Maria S.</span>
+            </div>
+            <div class="comentario">
+                <p class="texto-comentario">“Produtos lindos e atendimento impecável. Recomendo!”</p>
+                <span class="nome-cliente">- João P.</span>
+            </div>
+            <div class="comentario">
+                <p class="texto-comentario">“Amei a sensação de receber um mimo junto com a compra.”</p>
+                <span class="nome-cliente">- Helena R.</span>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -35,23 +254,6 @@
         </div>
     </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <script src="script.js"></script>
 </body>
-
 </html>
