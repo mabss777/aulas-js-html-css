@@ -1,102 +1,148 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 
 header {
-    backdrop-filter: blur(10px);
-    color: rgb(240, 248, 255);
-    border: #021373;
-    background-size: 100%;
-    background-color: #a1b2e081;
-    width: 100%;
-    height: 85px;
-    position: fixed;
-    z-index: 1000;
+  backdrop-filter: blur(10px);
+  color: rgb(240, 248, 255);
+  border: #021373;
+  background-size: 100%;
+  background-color: #a1b2e081;
+  width: 100%;
+  height: 85px;
+  position: fixed;
+  z-index: 1000;
+  margin: 0;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+
+
+}
+
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+}
+ 
+.logo {
+    font-size: 16px;
+    color: white;
+}
+ 
+.menu a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin-left: 60px;
+    margin-right: 50px;
+}
+.coco {
+  display: inline-block;
+  border: 10px solid;
 
 }
 
 
 .centralizar {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.centralizar2 {
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .quadrado {
-    display: flex;
-    justify-content: center;
-    height: 550px;
-    width: 550px;
-    font-size: 150%;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: white;
-    background-color: #0476D9;
-    border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  height: 550px;
+  width: 550px;
+  font-size: 150%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: white;
+  background-color: #0476D9;
+  border-radius: 20px;
 
 }
 
 .botao {
-    display: flex;
-    justify-content: center;
-    font-size: 20px;
-    text-decoration: none;
-    color: white;
-    border: 15px solid #0433BF;
-    background-color: #0433BF;
-    border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  border: 15px solid #0433BF;
+  background-color: #0433BF;
+  border-radius: 5px;
 }
 
 .titulos {
 
-    margin: 38%;
-    font-size: 30px;
+  margin: 38%;
+  font-size: 30px;
 }
 
 
-.tituloCad{    
-    text-align: center;
-    font-size: 30px;
+.tituloCad {
+  text-align: center;
+  font-size: 30px;
 }
 
 .emoticos {
-    color: #a1b2e0;
-    text-align: center;
+  color: #a1b2e0;
+  text-align: center;
 }
 
 .textoRod {
-    text-align: center;
-    color: antiquewhite;
-    font-family: "Chango", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  text-align: center;
+  color: antiquewhite;
+  font-family: "Chango", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 
 }
-.testa{
-    height: 40px; 
-    width: 450px; 
-    font-size: 20px;
+
+.testa {
+  height: 40px;
+  width: 450px;
+  font-size: 20px;
 }
 
-.retangulo{
-    display: flex;
-    justify-content: center;
-    height: 650px;
-    width: 550px;
-    font-size: 150%;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: white;
-    background-color: #0476D9;
-    border-radius: 20px;
+.retangulo {
+  display: flex;
+  justify-content: center;
+  height: 650px;
+  width: 550px;
+  font-size: 150%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: white;
+  background-color: #0476D9;
+  border-radius: 20px;
 }
 
-.images{
-    border: 5px solid aqua;
-    size: 1%;
-    
+.images {
+  border: 5px solid aqua;
+  size: 1%;
+
+}
+
+.icone {
+  height: 50px;
+  display: flex;
+  justify-content: cente;
+
 }
 
 @media (max-width: 768px) {
@@ -109,22 +155,23 @@ header {
 
 
 body {
-    background-color: #021373;
+  background-color: #021373;
 }
 
 footer {
-    background-color: #0476D9;
-    border-top: 4px solid #a1b2e0;
-    width: 100%;
-    height: 150px;
+  background-color: #0476D9;
+  border-top: 4px solid #a1b2e0;
+  width: 100%;
+  height: 150px;
 }
 
-.pripaiu{
-    display: flex;
-    border: 5px solid #a1b2e0;
+.pripaiu {
+  display: flex;
+  border: 5px solid #a1b2e0;
 
 
 }
+
 .carousel-fade {
   position: relative;
   width: 80%;
@@ -188,6 +235,7 @@ footer {
     height: 250px;
     width: 90%;
   }
+
   .dot {
     height: 10px;
     width: 10px;
@@ -367,7 +415,98 @@ footer {
     width: 90%;
     padding: 40px 20px;
   }
+
   .texto-comentario {
     font-size: 16px;
   }
 }
+
+.conteudo-compras {
+            display: flex;
+            justify-content: space-between;
+            padding: 60px;
+            gap: 40px;
+        }
+
+        .lista-produtos {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            flex: 2;
+        }
+
+        .produto {
+            display: flex;
+            align-items: center;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(2, 19, 115, 0.15);
+            padding: 15px;
+            transition: 0.3s;
+        }
+
+        .produto:hover {
+            transform: translateY(-3px);
+        }
+
+        .produto img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .descricao h3 {
+            color: #021373;
+            margin-bottom: 5px;
+        }
+
+        .descricao p {
+            color: #333;
+            font-size: 0.95rem;
+        }
+
+        .adicionar {
+            background-color: #021373;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 8px;
+            transition: 0.3s;
+        }
+
+        .adicionar:hover {
+            background-color: #0433bf;
+        }
+
+        .resumo {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(2, 19, 115, 0.15);
+            flex: 1;
+            height: 150px;
+            width: 250px;
+        }
+
+        .resumo h2 {
+            color: #021373;
+            margin-bottom: 15px;
+        }
+
+        #finalizar {
+            background-color: #0433bf;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        #finalizar:hover {
+            background-color: #021373;
+        }
